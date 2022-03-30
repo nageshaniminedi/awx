@@ -1,7 +1,7 @@
 app:
   name: AWX
   code: AWX
-  notify: autoliv-alerts@ecloudcontrol.com
+  notify: nanimineni@ecloudcontrol.com
 
 build:
   version: 17.1
