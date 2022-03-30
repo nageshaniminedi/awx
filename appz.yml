@@ -1,0 +1,54 @@
+app:
+  name: AWX
+  code: AWX
+  notify: autoliv-alerts@ecloudcontrol.com
+
+build:
+  version: 17.1
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: 
+  - awxtask-17.1
+  - awxweb-17.1
+  - redis-6.2
+  
+
+deploy:
+  context: seitapps/DEV
+  replicas: 1
+  type: awx
+  port:
+  - 8052
+
+
+volumes:      
+- claim: awx-projects-pvc
+  mount: /var/lib/awx/projects
+  name: awx-projects-pvc
+  size: 5Gi
+  mode: ReadWriteOnce
+  class: microk8s-hostpath
+
+- claim: awx-automation-pvc
+  mount: /ansible/network-automation
+  name: awx-automation-pvc
+  size: 10Gi
+  mode: ReadWriteMany
+  class: ""
+  volumeName: awx-automation
+  matchLabels: false
+
+
+properties:
+  DATABASE_NAME: awx
+  DATABASE_USER: alv_pgawx
+  DATABASE_HOST: awx-postgres-master-13-3
+  DATABASE_PORT: 5432
+  DATABASE_PASSWORD: 
+    vault: DATABASE_PASSWORD
+  SECRET_KEY: 
+    vault: SECRET_KEY
+  BROADCAST_WEBSOCKET_SECRET: 
+    vault: BROADCAST_WEBSOCKET_SECRET
+  revision : 39
