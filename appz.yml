@@ -15,7 +15,7 @@ build:
   
 
 deploy:
-  context: seitapps/DEV
+  context: nageshaniminedi/DEV
   replicas: 1
   type: awx
   port:
@@ -35,7 +35,7 @@ volumes:
   name: awx-automation-pvc
   size: 10Gi
   mode: ReadWriteMany
-  class: ""
+  class: microk8s-hostpath
   volumeName: awx-automation
   matchLabels: false
 
