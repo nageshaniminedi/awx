@@ -44,8 +44,8 @@ volumes:
 properties:
   MY_POD_NAMESPACE: nageshaniminedi-dev
   DATABASE_NAME: awx
-  DATABASE_USER: alv_pgawx
-  DATABASE_HOST: awx-postgres-master-13-3
+  DATABASE_USER: awx
+  DATABASE_HOST: postgres13-master-13-3
   DATABASE_PORT: 5432
   DATABASE_PASSWORD: 
     vault: DATABASE_PASSWORD
