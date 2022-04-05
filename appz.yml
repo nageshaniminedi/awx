@@ -23,24 +23,6 @@ deploy:
   - 8052
 
 
-volumes:      
-- claim: awx-projects-pvc
-  mount: /var/lib/awx/projects
-  name: awx-projects-pvc
-  size: 5Gi
-  mode: ReadWriteOnce
-  class: microk8s-hostpath
-  
-- claim: awx-automation-pvc
-  mount: /ansible/network-automation
-  name: awx-automation-pvc
-  size: 10Gi
-  mode: ReadWriteMany
-  class: microk8s-hostpath
-  volumeName: awx-automation
-  matchLabels: false
-
-
 properties:
   MY_POD_NAMESPACE: nageshaniminedi-dev
   DATABASE_NAME: awx
