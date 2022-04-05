@@ -29,8 +29,8 @@ volumes:
   name: awx-projects-pvc
   size: 5Gi
   mode: ReadWriteOnce
-  class: cstor-csi-disk
-
+  class: microk8s-hostpath
+  
 - claim: awx-automation-pvc
   mount: /ansible/network-automation
   name: awx-automation-pvc
