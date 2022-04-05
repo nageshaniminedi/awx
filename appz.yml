@@ -38,4 +38,4 @@ properties:
     vault: SECRET_KEY
   BROADCAST_WEBSOCKET_SECRET: 
     vault: BROADCAST_WEBSOCKET_SECRET
-  revision : 29
+  revision : 30
