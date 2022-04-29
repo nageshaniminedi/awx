@@ -9,10 +9,10 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: 
-  - awxtask-20.0
-  - awxweb-20.0
+  - awxtask-17.1
+  - awxweb-17.1
   - redis-6.2
-  - awxee-20.0
+  #- awxee-20.0
   
 
 deploy:
