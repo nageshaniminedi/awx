@@ -29,7 +29,7 @@ volumes:
   mode: ReadWriteOnce
   class: microk8s-hostpath
   
-- claim: awx-automation-pvc
+- claim: awx-automation
   mount: /ansible/network-automation
   name: awx-automation-pvc
   size: 5Gi
