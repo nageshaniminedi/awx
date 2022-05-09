@@ -4,7 +4,7 @@ app:
   notify: nanimineni@ecloudcontrol.com
 
 build:
-  version: 20.0
+  version: 20.0a
   env: DEV
   build_file: none
   output_files: output/*.zip
@@ -16,7 +16,7 @@ build:
   
 
 deploy:
-  context: nagesh/DEV
+  context: nageshaniminedi/DEV
   replicas: 1
   type: awx
   port:
@@ -29,9 +29,9 @@ volumes:
   mode: ReadWriteOnce
   class: microk8s-hostpath
   
-- claim: awx-automation
+- claim: awx-automation-pvc
   mount: /ansible/network-automation
-  name: awx-automation
+  name: awx-automation-pvc
   size: 5Gi
   mode: ReadWriteMany
   class: microk8s-hostpath
