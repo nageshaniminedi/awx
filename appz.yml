@@ -16,7 +16,7 @@ build:
   
 
 deploy:
-  context: nageshaniminedi/DEV
+  context: nagesh/DEV
   replicas: 1
   type: awx
   port:
