@@ -4,7 +4,7 @@ app:
   notify: nanimineni@ecloudcontrol.com
 
 build:
-  version: 20.0a
+  version: 20.0
   env: DEV
   build_file: none
   output_files: output/*.zip
