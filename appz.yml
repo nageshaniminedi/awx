@@ -12,7 +12,7 @@ build:
   - awxtask-21.0
   - awxweb-21.0
   - redis-6.2
-  - awxee-20.0
+  - awxee-21.0
   
 
 deploy:
