@@ -21,6 +21,7 @@ deploy:
   type: awx
   port:
   - 8052
+  - 80
 volumes:      
 - claim: awx-projects-pvc
   mount: /var/lib/awx/projects
