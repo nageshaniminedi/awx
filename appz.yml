@@ -45,7 +45,7 @@ properties:
   DATABASE_HOST: postgres13-master-13-3
   AWX_ADMIN_USER: redhat
   DATABASE_PORT: 5432
-  AWX_SKIP_MIGRATIONS: 1
+  #AWX_SKIP_MIGRATIONS: 1
   AWX_ADMIN_PASSWORD:
     vault: AWX_ADMIN_PASSWORD
   DATABASE_PASSWORD: 
@@ -54,4 +54,4 @@ properties:
     vault: SECRET_KEY
   BROADCAST_WEBSOCKET_SECRET: 
     vault: BROADCAST_WEBSOCKET_SECRET
-  revision : 12
+  revision : 13
