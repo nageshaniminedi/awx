@@ -4,13 +4,13 @@ app:
   notify: nanimineni@ecloudcontrol.com
 
 build:
-  version: 20.0
+  version: 21.0
   env: DEV
   build_file: none
   output_files: output/*.zip
   image_template: 
-  - awxtask-20.0
-  - awxweb-20.0
+  - awxtask-21.0
+  - awxweb-21.0
   - redis-6.2
   - awxee-20.0
   
@@ -45,7 +45,7 @@ properties:
   DATABASE_HOST: postgres13-master-13-3
   AWX_ADMIN_USER: redhat
   DATABASE_PORT: 5432
-  #AWX_SKIP_MIGRATIONS: 1
+  AWX_SKIP_MIGRATIONS: 1
   AWX_ADMIN_PASSWORD:
     vault: AWX_ADMIN_PASSWORD
   DATABASE_PASSWORD: 
